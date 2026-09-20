@@ -28,7 +28,7 @@ CyberShield provides a unified defense system that analyzes suspicious content a
 The **Android Companion App** and the **Web Threat Analyzer** are built to complement each other, but they also function as completely independent tools:
 
 * **Automated Detection:** The Android background sensor automatically scans incoming notifications and alerts the user in real-time if a threat is flagged.
-* **Standalone Web Triage & Fallback:** Users can simply copy-paste text directly into the **Web Analyzer** without using or installing the Android app at all. This allows anyone (including mobile or desktop users) to quickly analyze suspicious text, know more about the threat, use deep triage, and access preventative playbooks.
+* **Standalone Web Triage & Fallback:** Users can simply copy-paste text directly into the **Web Analyzer**—either to investigate further after receiving an alert from the Android app, or to check a completely random message. This allows anyone (including mobile or desktop users) to quickly analyze suspicious text, know more about the threat, and access preventative playbooks instantly.
 * **Unified Engine:** Both components query the exact same FastAPI backend, ensuring identical rule-based triage, risk-scoring, and protective action playbooks regardless of how the user accesses the platform.
 
 ### 📊 Threat Analysis Outputs
