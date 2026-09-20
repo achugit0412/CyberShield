@@ -22,16 +22,21 @@ Users often do not know whether a message is dangerous or what they should do ne
 
 ## 💡 Solution
 
-CyberShield analyzes suspicious content and provides:
+CyberShield provides a unified defense system that analyzes suspicious content and delivers simple, understandable security guidance—no prior cybersecurity knowledge required. Additionally it teaches basics of this attacking techniques to know what to do in this situation 
 
-* Risk level: **LOW / MEDIUM / HIGH / CRITICAL**
-* Risk score
-* Threat category
-* Suspicious indicators
-* Recommended actions
-* Guidance on what to do if the user has already interacted with the message
+### 🔄 How the Ecosystem Works Together
+The **Android Companion App** and the **Web Threat Analyzer** are built to complement each other, but they also function as completely independent tools:
 
-The system is designed to provide simple, understandable security guidance rather than requiring cybersecurity knowledge.
+* **Automated Detection:** The Android background sensor automatically scans incoming notifications and alerts the user in real-time if a threat is flagged.
+* **Standalone Web Triage & Fallback:** Users can simply copy-paste text directly into the **Web Analyzer** without using or installing the Android app at all. This allows anyone (including mobile or desktop users) to quickly analyze suspicious text, know more about the threat, use deep triage, and access preventative playbooks.
+* **Unified Engine:** Both components query the exact same FastAPI backend, ensuring identical rule-based triage, risk-scoring, and protective action playbooks regardless of how the user accesses the platform.
+
+### 📊 Threat Analysis Outputs
+For every message analyzed in Web platform, CyberShield dynamically generates:
+* **Risk Evaluation:** Clear classification levels (LOW / MEDIUM / HIGH / CRITICAL) paired with a precise numerical Risk Score.
+* **Threat Categorization:** Identification of the attack type (e.g., Phishing, OTP Stealing, Social Engineering).
+* **Suspicious Indicators:** Breakdowns of specific red flags detected within the text (e.g., high urgency, financial baiting).
+* **Actionable Guidance:** Recommended immediate steps to take, alongside proactive playbooks detailing what to do if the user has already interacted with the threat.
 
 ## ✨ Key Features
 
