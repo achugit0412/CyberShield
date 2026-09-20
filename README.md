@@ -3,6 +3,7 @@
 **CyberShield is a defensive cybersecurity platform that helps users identify phishing, financial scams, malicious links, fake job offers, and social-engineering attacks.**
 
 It combines a **web-based threat analyzer**, a **FastAPI backend**, and an **Android companion sensor** that can analyze suspicious notifications and provide security alerts.
+It then provides clear guidance on what to do next and what actions to take if the user has already interacted with the threat. CyberShield also teaches users about the detected type of attack, how it works, and how to recognize similar threats in the future
 
 
 ## 🚨 Problem
