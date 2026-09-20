@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberShield — Digital Security Intelligence</title>
+
+    <meta
+        name="description"
+        content="CyberShield detects phishing, scams, suspicious messages and digital security threats."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="/static/style.css">
+
+<style>
+.solution-card { cursor:pointer; transition:transform .25s ease, box-shadow .25s ease; }
+.solution-card:hover { transform:translateY(-5px); }
+.solution-explanation { position:relative; margin-top:25px; padding:35px; background:#fff; border:1px solid #e5dfe3; border-radius:24px; box-shadow:0 20px 60px rgba(40,20,35,.12); animation:solutionOpen .3s ease; }
+.solution-explanation.hidden { display:none; }
+.solution-close { position:absolute; top:18px; right:18px; width:40px; height:40px; border:1px solid #ddd; border-radius:10px; background:#fff; font-size:25px; cursor:pointer; }
+.solution-explanation > span { display:block; margin-bottom:12px; color:#b92369; font-size:9px; font-weight:900; letter-spacing:.15em; }
+.solution-explanation h2 { margin:0 50px 15px 0; font-size:clamp(30px,4vw,52px); line-height:1; letter-spacing:-.05em; }
+#solutionDescription { max-width:850px; color:#666; font-size:13px; line-height:1.8; }
+.solution-info-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; margin-top:28px; }
+.solution-info-box { padding:24px; border:1px solid #ebe6e9; border-radius:18px; background:#faf9fa; }
+.solution-info-box > span { display:block; margin-bottom:12px; color:#b92369; font-size:8px; font-weight:900; letter-spacing:.15em; }
+.solution-info-box p,.solution-info-box li { color:#666; font-size:11px; line-height:1.75; }
+.solution-info-box p { margin:0; }
+.solution-info-box ul { margin:0; padding-left:18px; }
+.solution-info-box li + li { margin-top:7px; }
+@keyframes solutionOpen { from {opacity:0; transform:translateY(10px)} to {opacity:1; transform:translateY(0)} }
+@media(max-width:700px){ .solution-info-grid{grid-template-columns:1fr;} .solution-explanation{padding:25px 18px;} }
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="ambient ambient-1"></div>
+<div class="ambient ambient-2"></div>
+<div class="ambient ambient-3"></div>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <a href="#home" class="brand">
+        <span class="brand-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+        <span class="brand-name">CyberShield</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#scanner">SCANNER</a>
+        <a href="#solutions">SOLUTIONS</a>
+        <a href="#security">SECURITY</a>
+        <a href="#about">ABOUT</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="notifyBtn" class="notification-btn" type="button">
+            <span class="notification-dot"></span>
+            <span>Notifications</span>
+        </button>
+
+        <button class="menu-btn" type="button" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home" class="hero-section">
+
+    <div class="hero-shell">
+
+        <div class="hero-copy">
+
+            <div class="eyebrow">
+                <span class="eyebrow-pulse"></span>
+                AI-POWERED DIGITAL PROTECTION
+            </div>
+
+            <h1>
+                PROTECT
+                <span>YOUR</span>
+                DIGITAL
+                <strong>WORLD.</strong>
+            </h1>
+
+            <p class="hero-description">
+                CyberShield analyzes suspicious messages, links and digital
+                threats before they become real problems.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#scanner" class="primary-btn">
+                    <span>START SCANNING</span>
+                    <span class="btn-arrow">↗</span>
+                </a>
+
+                <a href="#solutions" class="secondary-btn">
+                    EXPLORE PROTECTION
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+
+                <div class="trust-avatars">
+                    <span>CS</span>
+                    <span>AI</span>
+                    <span>✓</span>
+                </div>
+
+                <div>
+                    <strong>REAL-TIME THREAT ANALYSIS</strong>
+                    <small>Built for everyday digital safety</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CENTER SECURITY VISUAL -->
+
+        <div class="hero-visual">
+
+            <div class="visual-grid"></div>
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+
+            <div class="security-core">
+
+                <div class="core-ring ring-one"></div>
+                <div class="core-ring ring-two"></div>
+                <div class="core-ring ring-three"></div>
+
+                <div class="shield-symbol">
+
+                    <svg viewBox="0 0 180 210" aria-hidden="true">
+                        <path
+                            d="M90 8 L158 35 V91 C158 142 130 178 90 199 C50 178 22 142 22 91 V35 Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="5"
+                        />
+
+                        <path
+                            d="M90 36 L132 52 V91 C132 124 116 148 90 164 C64 148 48 124 48 91 V52 Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            opacity=".55"
+                        />
+
+                        <path
+                            d="M63 97 L81 115 L119 75"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+
+                </div>
+
+                <div class="core-label">
+                    <span>CYBERSHIELD</span>
+                    <small>ACTIVE PROTECTION</small>
+                </div>
+
+            </div>
+
+            <div class="floating-chip chip-one">
+                <span class="chip-icon">✓</span>
+                PHISHING BLOCKED
+            </div>
+
+            <div class="floating-chip chip-two">
+                <span class="chip-icon">AI</span>
+                AI ANALYSIS
+            </div>
+
+            <div class="floating-chip chip-three">
+                <span class="chip-icon">●</span>
+                LIVE MONITORING
+            </div>
+
+        </div>
+
+
+        <!-- THREAT CARD -->
+
+        <aside class="threat-card">
+
+            <div class="card-top">
+                <span>GLOBAL SECURITY</span>
+
+                <span class="live-status">
+                    <i></i>
+                    LIVE
+                </span>
+            </div>
+
+            <div class="threat-number">12.8M</div>
+
+            <div class="threat-title">
+                THREATS BLOCKED
+                <br>
+                TODAY
+            </div>
+
+            <div class="threat-chart">
+
+                <span style="height:30%"></span>
+                <span style="height:46%"></span>
+                <span style="height:39%"></span>
+                <span style="height:65%"></span>
+                <span style="height:52%"></span>
+                <span style="height:76%"></span>
+                <span style="height:61%"></span>
+                <span style="height:88%"></span>
+                <span style="height:70%"></span>
+                <span style="height:96%"></span>
+                <span style="height:79%"></span>
+                <span style="height:100%"></span>
+
+            </div>
+
+            <div class="card-footer">
+                <span>THREAT ENGINE</span>
+                <strong>ACTIVE</strong>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <div class="scroll-indicator">
+        <span></span>
+        SCROLL TO SCAN
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SCANNER
+========================================================= -->
+
+<section id="scanner" class="scanner-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-number">01 / ANALYSIS</span>
+
+                <h2>
+                    CHECK IT
+                    <span>BEFORE</span>
+                    YOU TRUST IT.
+                </h2>
+            </div>
+
+            <p>
+                Paste a suspicious message, email, URL or notification.
+                CyberShield examines the content and identifies common
+                warning signs.
+            </p>
+
+        </div>
+
+
+        <div class="scanner-layout">
+
+            <!-- INPUT -->
+
+            <div class="scanner-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="panel-label">SECURITY SCANNER</span>
+                        <h3>Analyze suspicious content</h3>
+                    </div>
+
+                    <div class="scanner-live">
+                        <span></span>
+                        READY
+                    </div>
+
+                </div>
+
+                <label for="message" class="input-label">
+                    PASTE MESSAGE / URL / EMAIL
+                </label>
+
+                <div class="textarea-wrapper">
+
+                    <textarea
+                        id="message"
+                        placeholder="Paste a suspicious message, email, URL, job offer, payment request or security alert here..."
+                        spellcheck="false"
+                    ></textarea>
+
+                    <div class="textarea-footer">
+                        <span>AI + RULE-BASED THREAT ANALYSIS</span>
+                        <span>SECURE INPUT</span>
+                    </div>
+
+                </div>
+
+                <button id="analyzeBtn" class="analyze-btn" type="button">
+
+                    <span class="analyze-icon">
+                        ↗
+                    </span>
+
+                    <span>ANALYZE THREAT</span>
+
+                    <span class="analyze-arrow">
+                        →
+                    </span>
+
+                </button>
+
+                <div id="loading" class="loading hidden">
+
+                    <div class="loader-ring"></div>
+
+                    <div>
+                        <strong>ANALYZING CONTENT</strong>
+                        <span>Checking indicators and threat patterns...</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULTS -->
+
+            <div id="results" class="results-panel hidden">
+
+                <div class="result-header">
+
+                    <div>
+                        <span class="panel-label">ANALYSIS RESULT</span>
+                        <h3>Threat assessment</h3>
+                    </div>
+
+                    <div id="riskLabel" class="risk-label">
+                        UNKNOWN
+                    </div>
+
+                </div>
+
+
+                <div class="risk-score-area">
+
+                    <div class="score-circle">
+
+                        <div>
+                            <span id="riskScore">0</span>
+                            <small>/100</small>
+                        </div>
+
+                    </div>
+
+                    <div class="score-details">
+
+                        <div class="score-bar-bg">
+                            <div id="scoreBar" class="score-bar"></div>
+                        </div>
+
+                        <span>RISK SCORE</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-stats">
+
+                    <div class="result-stat">
+                        <span>CATEGORY</span>
+                        <strong id="category">—</strong>
+                    </div>
+
+                    <div class="result-stat">
+                        <span>INDICATORS</span>
+                        <strong id="indicatorCount">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-box">
+
+                    <span>RECOMMENDED ACTION</span>
+
+                    <p id="recommendation">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+
+                <div class="indicators-box">
+
+                    <div class="indicator-title">
+                        <span>DETECTED INDICATORS</span>
+                    </div>
+
+                    <ul id="indicators"></ul>
+
+                </div>
+
+
+                <div class="action-box">
+
+                    <span>WHAT TO DO NEXT</span>
+
+                    <div id="actions">
+                        Review the analysis before interacting with the content.
+                    </div>
+
+                </div>
+<div class="action-box already-interacted-box">
+
+    <span>IF YOU ALREADY INTERACTED</span>
+
+    <div id="alreadyInteracted">
+        Stop further interaction and secure any affected accounts.
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOLUTIONS
+========================================================= -->
+
+<section id="solutions" class="solutions-section">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-number">02 / PROTECTION</span>
+
+                <h2>
+                    ONE SHIELD.
+                    <span>MANY</span>
+                    THREATS.
+                </h2>
+            </div>
+
+            <p>
+                CyberShield helps identify the warning signs behind common
+                digital scams and social-engineering attacks.
+            </p>
+
+        </div>
+
+
+        <div class="solution-grid">
+
+            <article class="solution-card large" onclick="showSolution('phishing')">
+
+                <div class="solution-icon">
+                    ↗
+                </div>
+
+                <span>01</span>
+
+                <h3>PHISHING<br>DETECTION</h3>
+
+                <p>
+                    Identify suspicious messages, urgent requests,
+                    impersonation attempts and deceptive links.
+                </p>
+
+                <div class="solution-line"></div>
+
+            </article>
+
+
+            <article class="solution-card" onclick="showSolution('scam')">
+
+                <div class="solution-icon">
+                    $
+                </div>
+
+                <span>02</span>
+
+                <h3>SCAM<br>ANALYSIS</h3>
+
+                <p>
+                    Detect common payment and social-engineering warning signs.
+                </p>
+
+                <div class="solution-line"></div>
+
+            </article>
+
+
+            <article class="solution-card" onclick="showSolution('url')">
+
+                <div class="solution-icon">
+                    ◉
+                </div>
+
+                <span>03</span>
+
+                <h3>URL<br>INTELLIGENCE</h3>
+
+                <p>
+                    Examine suspicious links and highlight risky patterns.
+                </p>
+
+                <div class="solution-line"></div>
+
+            </article>
+
+
+            <article class="solution-card" onclick="showSolution('account')">
+
+                <div class="solution-icon">
+                    #
+                </div>
+
+                <span>04</span>
+
+                <h3>ACCOUNT<br>SAFETY</h3>
+
+                <p>
+                    Get defensive guidance when you suspect an account
+                    or login may be compromised.
+                </p>
+
+                <div class="solution-line"></div>
+
+            </article>
+
+
+            <article class="solution-card" onclick="showSolution('incident')">
+
+                <div class="solution-icon">
+                    !
+                </div>
+
+                <span>05</span>
+
+                <h3>INCIDENT<br>RESPONSE</h3>
+
+                <p>
+                    Follow practical steps after encountering suspicious
+                    digital activity.
+                </p>
+
+                <div class="solution-line"></div>
+
+            </article>
+
+        </div>
+
+        <!-- CLICKABLE SOLUTION EXPLANATION -->
+        <div id="solutionExplanation" class="solution-explanation hidden">
+            <button type="button" class="solution-close" onclick="closeSolution()" aria-label="Close explanation">×</button>
+            <span id="solutionLabel"></span>
+            <h2 id="solutionTitle"></h2>
+            <p id="solutionDescription"></p>
+            <div class="solution-info-grid">
+                <div class="solution-info-box">
+                    <span>HOW IT HAPPENS</span>
+                    <p id="solutionHow"></p>
+                </div>
+                <div class="solution-info-box">
+                    <span>WARNING SIGNS</span>
+                    <ul id="solutionSigns"></ul>
+                </div>
+                <div class="solution-info-box">
+                    <span>HOW TO PREVENT IT</span>
+                    <ul id="solutionPrevention"></ul>
+                </div>
+                <div class="solution-info-box">
+                    <span>IF IT ALREADY HAPPENED</span>
+                    <p id="solutionAfter"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECURITY INTELLIGENCE
+========================================================= -->
+
+<section id="security" class="security-section">
+
+    <div class="section-container security-layout">
+
+        <div class="security-copy">
+
+            <span class="section-number">03 / INTELLIGENCE</span>
+
+            <h2>
+                TURN
+                <span>UNCERTAINTY</span>
+                INTO ACTION.
+            </h2>
+
+            <p>
+                Security decisions become easier when warning signs are
+                organized into a clear risk assessment and practical next steps.
+            </p>
+
+            <div class="security-points">
+
+                <div>
+                    <span>01</span>
+                    <strong>DETECT</strong>
+                    <p>Find suspicious signals.</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <strong>EXPLAIN</strong>
+                    <p>Understand why something looks risky.</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <strong>RESPOND</strong>
+                    <p>Follow defensive next steps.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="security-dashboard">
+
+            <div class="dashboard-top">
+
+                <span>THREAT INTELLIGENCE</span>
+
+                <span class="dashboard-live">
+                    ● SYSTEM ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-main">
+
+                <div class="radar">
+
+                    <div class="radar-circle circle-a"></div>
+                    <div class="radar-circle circle-b"></div>
+                    <div class="radar-circle circle-c"></div>
+
+                    <div class="radar-cross horizontal"></div>
+                    <div class="radar-cross vertical"></div>
+
+                    <div class="radar-sweep"></div>
+
+                    <div class="radar-point point-a"></div>
+                    <div class="radar-point point-b"></div>
+                    <div class="radar-point point-c"></div>
+
+                    <div class="radar-center">
+                        <span>AI</span>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-metrics">
+
+                    <div class="metric">
+                        <span>ANALYSIS ENGINE</span>
+                        <strong>ONLINE</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>THREAT SIGNALS</span>
+                        <strong>24 / 7</strong>
+                    </div>
+
+                    <div class="metric">
+                        <span>RESPONSE</span>
+                        <strong>ACTIVE</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-bottom">
+
+                <span>SECURITY STATUS</span>
+
+                <strong>
+                    <i></i>
+                    PROTECTED
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT / CTA
+========================================================= -->
+
+<section id="about" class="about-section">
+
+    <div class="about-shell">
+
+        <div class="about-content">
+
+            <span class="section-number">04 / CYBERSHIELD</span>
+
+            <h2>
+                DON'T JUST
+                <span>CLICK.</span>
+                CHECK.
+            </h2>
+
+            <p>
+                A security assistant designed to help people recognize
+                suspicious digital activity and take safer next steps.
+            </p>
+
+            <a href="#scanner" class="primary-btn">
+                <span>SCAN SOMETHING NOW</span>
+                <span class="btn-arrow">↗</span>
+            </a>
+
+        </div>
+
+
+        <div class="about-visual">
+
+            <div class="giant-shield">
+
+                <svg viewBox="0 0 400 470" aria-hidden="true">
+
+                    <path
+                        d="M200 15 L365 78 V205 C365 326 295 408 200 455 C105 408 35 326 35 205 V78 Z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                    />
+
+                    <path
+                        d="M200 65 L315 108 V205 C315 288 269 347 200 383 C131 347 85 288 85 205 V108 Z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        opacity=".45"
+                    />
+
+                    <path
+                        d="M137 220 L178 260 L267 164"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="12"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        <span class="brand-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+
+        <strong>CyberShield</strong>
+    </div>
+
+    <span>
+        DEFENSIVE SECURITY INTELLIGENCE
+    </span>
+
+    <span>
+        © 2026 CyberShield
+    </span>
+
+</footer>
+
+
+<script src="/static/app.js"></script>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener("click", function(e) {
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", function() {
+        navLinks.classList.toggle("mobile-open");
+    });
+}
+</script>
+
+
+<script>
+const solutionData = {
+  phishing:{label:'01 / PHISHING DETECTION',title:'HOW PHISHING ATTACKS HAPPEN',description:'Phishing is a social-engineering attack where an attacker pretends to be a trusted person or organization to trick someone into revealing information or taking an unsafe action.',how:'The attacker sends an email, SMS, social-media message, or notification that looks legitimate. It may create urgency, claim there is a problem with an account, or offer a reward. The victim is then directed to a link, attachment, fake login page, or conversation.',signs:['Unexpected messages asking you to act immediately.','Requests for passwords, OTPs, or sensitive information.','Links that do not match the claimed organization.','Threats such as account suspension.','Unusual sender addresses, spelling, or formatting.'],prevention:['Do not click unexpected links.','Open the official website manually.','Never share passwords or OTPs.','Verify the sender independently.','Enable multi-factor authentication.'],after:'If you clicked a suspicious link, stop interacting with it. If you entered a password, change it through the legitimate website and enable multi-factor authentication.'},
+  scam:{label:'02 / SCAM ANALYSIS',title:'HOW ONLINE SCAMS HAPPEN',description:'Scams use deception to convince people to send money, reveal information, or perform an action that benefits the attacker.',how:'The attacker creates a believable story such as a job offer, prize, refund, investment opportunity, emergency, or payment request. The story is designed to make the victim trust the request before verifying it.',signs:['Promises of unusually large rewards.','Requests for upfront fees.','Pressure to act immediately.','Requests for OTPs or banking information.','Unexpected payment instructions.'],prevention:['Verify offers independently.','Do not send money because of an unexpected message.','Never share OTPs or passwords.','Use official company websites.','Be cautious about urgent requests.'],after:'If you sent money, contact your bank or payment provider immediately. Preserve messages and screenshots and secure any affected accounts.'},
+  url:{label:'03 / URL INTELLIGENCE',title:'HOW DECEPTIVE LINKS WORK',description:'Attackers can use deceptive URLs to redirect victims to phishing pages, fake payment pages, or malicious downloads.',how:'A malicious link may use a misleading domain, unusual characters, or a domain name that resembles a legitimate organization.',signs:['The domain does not match the claimed organization.','Unusual spelling or characters in the URL.','Unexpected shortened links.','Urgent messages containing the link.','The website unexpectedly requests sensitive information.'],prevention:['Check the actual domain.','Open important websites manually.','Avoid unexpected links.','Do not download unknown files.','Do not enter credentials on unfamiliar websites.'],after:'If you opened a suspicious website, close it. If you entered credentials, change them through the legitimate service and review account activity.'},
+  account:{label:'04 / ACCOUNT SAFETY',title:'HOW ACCOUNT TAKEOVER ATTEMPTS HAPPEN',description:'Account takeover attacks attempt to obtain passwords, authentication codes, or other credentials.',how:'Attackers may use fake login pages, impersonated support staff, password-reuse attacks, or messages asking for authentication codes.',signs:['Unexpected login notifications.','Requests for OTPs or authentication codes.','Unexpected password-reset messages.','Suspicious login pages.','Unrecognized account activity.'],prevention:['Use unique passwords.','Enable multi-factor authentication.','Never share authentication codes.','Review account login activity.','Use official websites for login.'],after:'Change the affected password through the legitimate service, sign out other sessions if possible, enable multi-factor authentication, and review recent activity.'},
+  incident:{label:'05 / INCIDENT RESPONSE',title:'WHAT TO DO AFTER A SECURITY INCIDENT',description:'Incident response means taking practical steps to limit damage after interacting with suspicious content.',how:'First stop interacting with the suspicious source. Then secure affected accounts or devices and preserve evidence such as screenshots, messages, URLs, and transaction details.',signs:['You clicked a suspicious link.','You entered credentials on an unfamiliar website.','You downloaded an unexpected file.','You shared sensitive information.','You sent money because of a suspicious message.'],prevention:['Stop communicating with the suspicious sender.','Change compromised passwords.','Enable multi-factor authentication.','Contact your bank if money was involved.','Preserve screenshots and other evidence.'],after:'Secure affected accounts first. If financial or sensitive information was compromised, contact the relevant provider using its official contact method.'}
+};
+function showSolution(type){ const d=solutionData[type], p=document.getElementById('solutionExplanation'); if(!d||!p)return; document.getElementById('solutionLabel').textContent=d.label; document.getElementById('solutionTitle').textContent=d.title; document.getElementById('solutionDescription').textContent=d.description; document.getElementById('solutionHow').textContent=d.how; document.getElementById('solutionAfter').textContent=d.after; const s=document.getElementById('solutionSigns'); s.innerHTML=''; d.signs.forEach(x=>{const li=document.createElement('li');li.textContent=x;s.appendChild(li)}); const pr=document.getElementById('solutionPrevention'); pr.innerHTML=''; d.prevention.forEach(x=>{const li=document.createElement('li');li.textContent=x;pr.appendChild(li)}); p.classList.remove('hidden'); p.scrollIntoView({behavior:'smooth',block:'start'}); }
+function closeSolution(){ const p=document.getElementById('solutionExplanation'); if(p)p.classList.add('hidden'); }
+</script>
+
+<script>
+(function () {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", function () {
+        if (!window.location.hash) window.scrollTo(0, 0);
+    });
+})();
+</script>
+</body>
+</html>
