@@ -4,6 +4,7 @@
 
 It combines a **web-based threat analyzer**, a **FastAPI backend**, and an **Android companion sensor** that can analyze suspicious notifications and provide security alerts.
 
+
 ## 🚨 Problem
 
 Scam messages are becoming increasingly convincing. Students and everyday smartphone users may receive:
@@ -135,7 +136,8 @@ CyberShield/
 
 * Ollama
 * Local open-source LLM
-
+  
+⚠️ NOTE FOR JUDGES (Play Protect Warning):Because this app's core feature relies on Android Call and SMS permissions, Google Play Protect will flag the sideloaded .apk as untrusted.To test the live app, please temporarily disable Play Protect (Play Store > Profile > Play Protect > Settings > Turn off Scan) before installing, or click "Install Anyway" if prompted by the dialogue box.
 CyberShield also includes a rule-based fallback so that threat analysis does not depend entirely on an external AI service.
 
 ## 🚀 Run the Backend Locally
