@@ -219,8 +219,7 @@ The Android application communicates with the CyberShield FastAPI backend for th
 ## 🌍 Live Demo
 
 **CyberShield Web Application:**
-
-http://43.204.97.141
+https://43-204-97-141.nip.io/
 
 ## 🔐 Privacy & Security
 
