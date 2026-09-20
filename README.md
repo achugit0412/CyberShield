@@ -138,7 +138,15 @@ CyberShield/
 * Ollama
 * Local open-source LLM
   
-⚠️ NOTE FOR JUDGES (Play Protect Warning):Because this app's core feature relies on Android Call and SMS permissions, Google Play Protect will flag the sideloaded .apk as untrusted.To test the live app, please temporarily disable Play Protect (Play Store > Profile > Play Protect > Settings > Turn off Scan) before installing, or click "Install Anyway" if prompted by the dialogue box.
+⚠️ **NOTE FOR JUDGES (Play Protect & Restricted Settings Warning):**
+Because this app's core features rely on Android Call, Notification, and SMS permissions, Google Play Protect will flag the sideloaded `.apk` as untrusted. To test the live app, please temporarily disable Play Protect (**Play Store > Profile > Play Protect > Settings > Turn off Scan**) before installing, or click **"Install Anyway"** if prompted.
+
+Additionally, because this prototype is downloaded via a browser, Android's security architecture will grey out the toggle buttons (**"Restricted Setting" error**). After installing, please follow these 3 quick steps to enable testing:
+1. Go to your phone's **Settings > Apps > CyberShield**.
+2. Tap the **three vertical dots** in the top-right corner.
+3. Select **"Allow restricted settings"** and confirm. You can now enable Notification and Call permissions normally!
+
+
 CyberShield also includes a rule-based fallback so that threat analysis does not depend entirely on an external AI service.
 
 ## 🚀 Run the Backend Locally
